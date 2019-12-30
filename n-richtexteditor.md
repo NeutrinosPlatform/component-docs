@@ -3,7 +3,7 @@
 n-RichTextEditor provides ready-to-use rich text editors created with a powerful framework. Made with real-time collaborative editing in mind. Its is build using the primary open-source project named [CKEditor](https://ckeditor.com/docs/ckeditor5/latest/index.html). 
 
 # Quick start
-- Downoload n-ckeditor component from marketplace using the plugin manager.
+- Downoload n-richtexteditor component from marketplace using the plugin manager.
 - Drag and drop a component from the palette list to you page
 - Install the following packages:
 ```sh
