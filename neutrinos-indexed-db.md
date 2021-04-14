@@ -1,1 +1,2 @@
-[http://docs1.neutrinos.co/articles/#!service-designer-user-s-guide/indexed-db-node](http://docs1.neutrinos.co/articles/#!service-designer-user-s-guide/indexed-db-node "IndexedDb Documentation" target="_blank")
+\
+<a href="http://docs1.neutrinos.co/articles/#!service-designer-user-s-guide/indexed-db-node" target="_blank">IndexedDb Documentation</a>
