@@ -1,1 +1,2 @@
 <a href="http://docs1.neutrinos.co/articles/#!server-side-service-designer-publication/amqp-consumer-node" target="_blank">http://docs1.neutrinos.co/articles/#!server-side-service-designer-publication/amqp-consumer-node</a>
+<a href="http://docs1.neutrinos.co/articles/#!server-side-service-designer-publication/amqp-rpc-node" target="_blank">http://docs1.neutrinos.co/articles/#!server-side-service-designer-publication/amqp-rpc-node</a>
