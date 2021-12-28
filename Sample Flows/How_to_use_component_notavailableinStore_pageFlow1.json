@@ -1,0 +1,152 @@
+{
+    "design": [
+      {"id":"sd_BKLcMQfoI2Vhzx5A",
+       "type":"OnInit",
+       "z":"sd_mo5S4lmW6lymyE9X",
+       "viewType":"common",
+       "nodeType":"start",
+       "name":"",
+       "functionName":"sd_BKLcMQfoI2Vhzx5A",
+       "category":"Lifecycle Events",
+       "x":225,
+       "y":160,
+       "wires": [
+         ["sd_rMYxm5p65vxXw7ZP"
+         ]
+       ],
+       "__n_excludedFromValidation__": {
+       }
+      },
+      {
+        "id":"sd_rMYxm5p65vxXw7ZP",
+        "type":"UseDependency",
+        "z":"sd_mo5S4lmW6lymyE9X",
+        "viewType":"client-pages",
+        "nodeType":"flow",
+        "name":"",
+        "inputs":1,
+        "outputs":1,
+        "property":"",
+        "propertyType":"bh",
+        "propertyGv":"bh.",
+        "alias":"",
+        "modules": [
+          {"textIp":"MatBottomSheet",
+           "typedIpValue": {
+             "type":"this.page",
+             "value":"bottomSheet"
+           },
+           "injectable":true
+          }
+        ],
+        "import_all":false,
+        "library":"@angular/material/bottom-sheet ",
+        "serviceDesignerType":"pages",
+        "functionName":"sd_rMYxm5p65vxXw7ZP",
+        "category":"Function",
+        "x":365,
+        "y":160,
+        "wires": [
+          ["sd_thRXBN4zaPjMRmf8"
+          ]
+        ],
+        "__n_excludedFromValidation__": {
+        }
+      },
+      {
+        "id":"sd_thRXBN4zaPjMRmf8",
+        "type":"UseDependency",
+        "z":"sd_mo5S4lmW6lymyE9X",
+        "viewType":"client-pages",
+        "nodeType":"flow",
+        "name":"",
+        "inputs":1,
+        "outputs":1,
+        "property":"",
+        "propertyType":"bh",
+        "propertyGv":"bh.",
+        "alias":"",
+        "modules": [
+          {"textIp":"bottomSheetcomponent",
+           "typedIpValue": {
+             "type":"bh",
+             "value":""
+           },
+           "injectable":true
+          }
+        ],
+        "import_all":false,
+        "library":" ./bottomsheet.component",
+        "serviceDesignerType":"pages",
+        "functionName":"sd_thRXBN4zaPjMRmf8",
+        "category":"Function",
+        "x":505,
+        "y":160,
+        "wires": [
+          [
+          ]
+        ],
+        "__n_excludedFromValidation__": {
+        }
+      }
+    ],
+    "dependencies": [
+      {"devid":"68bc9eec-a2fc-bccd-1630-883e4552c3eb",
+       "name":"neutrinos-lifecycle-events",
+       "displayName":"Lifecycle Events",
+       "version":"1.0.0",
+       "username":"avinash.gupta@neutrinos.co",
+       "publisher":"Neutrinos",
+       "default":true,
+       "visible":false,
+       "platformSupportVersion": {
+         "min":"7.8.0"
+       },
+       "dependencies": [
+         {"name":"neutrinos-lifecycle-events",
+          "displayName":"Lifecycle Events",
+          "packageType":"studio-nodes",
+          "version":"1.0.0",
+          "nodes": {
+            "pages": [
+              {"name":"OnChanges",
+               "displayName":"On Changes"
+              },
+              {
+                "name":"OnInit",
+                "displayName":"On Init"
+              },
+              {
+                "name":"DoCheck",
+                "displayName":"Do Check"
+              },
+              {
+                "name":"AfterContentInit",
+                "displayName":"After Content Init"
+              },
+              {
+                "name":"AfterContentChecked",
+                "displayName":"After Content Checked"
+              },
+              {
+                "name":"AfterViewInit",
+                "displayName":"After View Init"
+              },
+              {
+                "name":"AfterViewChecked",
+                "displayName":"After View Checked"
+              },
+              {
+                "name":"OnDestroy",
+                "displayName":"On Destroy"
+              }
+            ]
+          }
+         }
+       ],
+       "missing":false
+      }
+    ],
+    "serviceDesignerType":"pages",
+    "exportedDesignApp":"demapp2"
+  }
