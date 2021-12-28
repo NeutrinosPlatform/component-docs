@@ -1,0 +1,147 @@
+{
+  "design": [
+    {"id":"sd_sS1wj6KWx4WBAmdv",
+     "type":"Start",
+     "z":"sd_0ZMjmybvknZQBLmC",
+     "viewType":"client-server",
+     "nodeType":"start",
+     "name":"uploadfile",
+     "outputs":1,
+     "inputVariables": [
+       {"key":"data",
+        "defaultValue": {
+          "type":"any",
+          "value":""
+        },
+        "output":false
+       }
+     ],
+     "localVariables": [
+       {"key":"response",
+        "defaultValue": {
+          "type":"any",
+          "value":""
+        },
+        "output":true
+       }
+     ],
+     "accept_bh":false,
+     "functionName":"uploadfile",
+     "category":"General",
+     "x":80,
+     "y":60,
+     "wires": [
+       ["sd_Lbrlo60v7irGUxj9"
+       ]
+     ],
+     "__n_excludedFromValidation__": {
+     }
+    },
+    {
+      "id":"sd_Lbrlo60v7irGUxj9",
+      "type":"Environment",
+      "z":"sd_0ZMjmybvknZQBLmC",
+      "viewType":"client-pages",
+      "nodeType":"flow",
+      "name":"",
+      "outputs":1,
+      "envMaps": [
+        {"flowVar": {
+          "type":"bh",
+          "value":"ssdUrl"
+        },
+         "envProperty":"ssdURL"
+        }
+      ],
+      "functionName":"sd_Lbrlo60v7irGUxj9",
+      "category":"General",
+      "x":240,
+      "y":60,
+      "wires": [
+        ["sd_2mEJBrrK7ytFh9km"
+        ]
+      ],
+      "__n_excludedFromValidation__": {
+      }
+    },
+    {
+      "id":"sd_2mEJBrrK7ytFh9km",
+      "type":"Script",
+      "z":"sd_0ZMjmybvknZQBLmC",
+      "viewType":"common",
+      "nodeType":"flow",
+      "name":"",
+      "script":"bh.ssdUrl = `${bh.ssdUrl}upload`",
+      "functionName":"sd_2mEJBrrK7ytFh9km",
+      "category":"Function",
+      "x":385,
+      "y":60,
+      "wires": [
+        ["sd_Yt0N0hXyupuMBcsj"
+        ]
+      ],
+      "__n_excludedFromValidation__": {
+      }
+    },
+    {
+      "id":"sd_Yt0N0hXyupuMBcsj",
+      "type":"HttpRequest",
+      "z":"sd_0ZMjmybvknZQBLmC",
+      "viewType":"client-pages",
+      "nodeType":"flow",
+      "name":"",
+      "method":"post",
+      "methodMappingObj": {
+      },
+      "urlMapping":"bh.ssdUrl",
+      "urlMappingObj": {
+        "mapVarType":"bh",
+        "mapVarValue":"ssdUrl"
+      },
+      "ret":"json",
+      "retMappingObj": {
+      },
+      "observe":"",
+      "observeMappingObj": {
+      },
+      "reportProgress":false,
+      "withCreds":false,
+      "reqBody":"bh.input.data",
+      "reqBodyObj": {
+        "mapVarType":"bh.input",
+        "mapVarValue":"data"
+      },
+      "resultMapping":"bh.local.response",
+      "resultMappingObj": {
+        "mapVarType":"bh.local",
+        "mapVarValue":"response"
+      },
+      "headers": {
+      },
+      "headersObj": [
+      ],
+      "headerMappingObj": {
+      },
+      "params": {
+      },
+      "paramsObj": [
+      ],
+      "paramMappingObj": {
+      },
+      "functionName":"sd_Yt0N0hXyupuMBcsj",
+      "category":"HTTP",
+      "x":540,
+      "y":60,
+      "wires": [
+        [
+        ]
+      ],
+      "__n_excludedFromValidation__": {
+      }
+    }
+  ],
+  "dependencies": [
+  ],
+  "serviceDesignerType":"client",
+  "exportedDesignApp":"demapp2"
+}

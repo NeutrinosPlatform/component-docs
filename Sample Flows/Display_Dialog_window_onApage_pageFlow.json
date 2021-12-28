@@ -1,0 +1,278 @@
+{
+    "design": [
+      {"id":"sd_L0zsf4H2gAjSIi6I",
+       "type":"PageStart",
+       "z":"sd_sW606pct8V3PUkYk",
+       "viewType":"pages",
+       "nodeType":"start",
+       "name":"OpenDialog",
+       "outputs":1,
+       "inputVariables": [
+       ],
+       "localVariables": [
+         {"key":"data",
+          "defaultValue": {
+            "type":"any",
+            "value":""
+          },
+          "output":false
+         },
+         {
+           "key":"response",
+           "defaultValue": {
+             "type":"any",
+             "value":""
+           },
+           "output":false
+         }
+       ],
+       "flow_type":"sync",
+       "functionName":"openDialog",
+       "category":"General",
+       "x":80,
+       "y":140,
+       "wires": [
+         ["sd_T9lZwoEsV5FYgCbb"
+         ]
+       ],
+       "__n_excludedFromValidation__": {
+       }
+      },
+      {
+        "id":"sd_T9lZwoEsV5FYgCbb",
+        "type":"Script",
+        "z":"sd_sW606pct8V3PUkYk",
+        "viewType":"common",
+        "nodeType":"flow",
+        "name":"",
+        "script":"bh.data = {\n    name: \"This is a sample dialog window\"\n}",
+        "functionName":"sd_T9lZwoEsV5FYgCbb",
+        "category":"Function",
+        "x":245,
+        "y":140,
+        "wires": [
+          ["sd_rBGFK7ZFhpBJBu8s"
+          ]
+        ],
+        "__n_excludedFromValidation__": {
+        }
+      },
+      {
+        "id":"sd_rBGFK7ZFhpBJBu8s",
+        "type":"OpenDialog",
+        "z":"sd_sW606pct8V3PUkYk",
+        "viewType":"common",
+        "nodeType":"flow",
+        "name":"",
+        "outputs":4,
+        "flow": {
+          "flowId":"sd_bazzZ7GA3acJ6Wfz",
+          "label":"Dialog"
+        },
+        "relativePath":"./Dialog",
+        "data":"bh.local.data",
+        "ariaDescribedBy":"this.page",
+        "ariaLabel":"this.page",
+        "ariaLabelledBy":"this.page",
+        "autoFocus":"this.page",
+        "backdropClass":"this.page",
+        "closeOnNavigation":"this.page",
+        "direction":"this.page",
+        "disableClose":"this.page",
+        "hasBackdrop":"this.page",
+        "height":"\"400px\"",
+        "maxHeight":"this.page",
+        "minHeight":"this.page",
+        "width":"\"500px\"",
+        "maxWidth":"this.page",
+        "minWidth":"this.page",
+        "panelClass":"this.page",
+        "position":"this.page",
+        "restoreFocus":"this.page",
+        "role":"this.page",
+        "resultMapping":"bh.local.response",
+        "functionName":"sd_rBGFK7ZFhpBJBu8s",
+        "category":"Dialog",
+        "x":420,
+        "y":140,
+        "wires": [
+          [
+          ],
+          [
+            "sd_mH11RDe0GF1cz5Q3"
+          ],
+          [
+          ],
+          [
+          ]
+        ],
+        "__ssdTypeInputs__": {
+          "data": {
+            "type":"bh",
+            "value":"local.data",
+            "constant":false
+          },
+          "ariaDescribedBy": {
+            "type":"this.page",
+            "value":"",
+            "constant":false
+          },
+          "ariaLabel": {
+            "type":"this.page",
+            "value":"",
+            "constant":false
+          },
+          "ariaLabelledBy": {
+            "type":"this.page",
+            "value":"",
+            "constant":false
+          },
+          "autoFocus": {
+            "type":"this.page",
+            "value":"",
+            "constant":false
+          },
+          "backdropClass": {
+            "type":"this.page",
+            "value":"",
+            "constant":false
+          },
+          "closeOnNavigation": {
+            "type":"this.page",
+            "value":"",
+            "constant":false
+          },
+          "direction": {
+            "type":"this.page",
+            "value":"",
+            "constant":false
+          },
+          "disableClose": {
+            "type":"this.page",
+            "value":"",
+            "constant":false
+          },
+          "hasBackdrop": {
+            "type":"this.page",
+            "value":"",
+            "constant":false
+          },
+          "height": {
+            "type":"str",
+            "value":"400px",
+            "constant":false
+          },
+          "maxHeight": {
+            "type":"this.page",
+            "value":"",
+            "constant":false
+          },
+          "minHeight": {
+            "type":"this.page",
+            "value":"",
+            "constant":false
+          },
+          "width": {
+            "type":"str",
+            "value":"500px",
+            "constant":false
+          },
+          "maxWidth": {
+            "type":"this.page",
+            "value":"",
+            "constant":false
+          },
+          "minWidth": {
+            "type":"this.page",
+            "value":"",
+            "constant":false
+          },
+          "panelClass": {
+            "type":"this.page",
+            "value":"",
+            "constant":false
+          },
+          "position": {
+            "type":"this.page",
+            "value":"",
+            "constant":false
+          },
+          "restoreFocus": {
+            "type":"this.page",
+            "value":"",
+            "constant":false
+          },
+          "role": {
+            "type":"this.page",
+            "value":"",
+            "constant":false
+          },
+          "resultMapping": {
+            "type":"bh",
+            "value":"local.response",
+            "constant":false
+          }
+        },
+        "__n_excludedFromValidation__": {
+        }
+      },
+      {
+        "id":"sd_mH11RDe0GF1cz5Q3",
+        "type":"Script",
+        "z":"sd_sW606pct8V3PUkYk",
+        "viewType":"common",
+        "nodeType":"flow",
+        "name":"After Closed",
+        "script":"console.log(\"The User has accepted the policy\", bh.local.response);",
+        "functionName":"afterClosed",
+        "category":"Function",
+        "x":620,
+        "y":100,
+        "wires": [
+          [
+          ]
+        ],
+        "__n_excludedFromValidation__": {
+        }
+      }
+    ],
+    "dependencies": [
+      {"devid":"1dd8ed79-2f61-798f-0570-c8b153987b2c",
+       "name":"neutrinos-dialog",
+       "displayName":"Dialog",
+       "version":"1.0.0",
+       "username":"avinash.gupta@neutrinos.co",
+       "publisher":"Neutrinos",
+       "platformSupportVersion": {
+         "min":"7.8.0"
+       },
+       "default":true,
+       "visible":false,
+       "dependencies": [
+         {"name":"neutrinos-dialog",
+          "displayName":"Dialog",
+          "packageType":"studio-nodes",
+          "version":"1.0.0",
+          "nodes": {
+            "pages": [
+              {"name":"OpenDialog",
+               "displayName":"Open Dialog"
+              },
+              {
+                "name":"GetDialogData",
+                "displayName":"Get Dialog Data"
+              },
+              {
+                "name":"CloseDialog",
+                "displayName":"Close Dialog"
+              }
+            ]
+          }
+         }
+       ],
+       "missing":false
+      }
+    ],
+    "serviceDesignerType":"pages",
+    "exportedDesignApp":"demoapp4"
+  }

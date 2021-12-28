@@ -1,0 +1,216 @@
+{
+    "design": [
+      {"id":"sd_4Q5z0lk8DethiS6s",
+       "type":"PageStart",
+       "z":"sd_mo5S4lmW6lymyE9X",
+       "viewType":"pages",
+       "nodeType":"start",
+       "name":"CreateUser",
+       "outputs":1,
+       "inputVariables": [
+         {"key":"formdata",
+          "defaultValue": {
+            "type":"any",
+            "value":""
+          },
+          "output":false
+         }
+       ],
+       "localVariables": [
+         {"key":"result",
+          "defaultValue": {
+            "type":"any",
+            "value":""
+          },
+          "output":false
+         }
+       ],
+       "flow_type":"sync",
+       "functionName":"createUser",
+       "category":"General",
+       "x":85,
+       "y":260,
+       "wires": [
+         ["sd_Z1xbg67sKFnOwtKj"
+         ]
+       ],
+       "__n_excludedFromValidation__": {
+       }
+      },
+      {
+        "id":"sd_Z1xbg67sKFnOwtKj",
+        "type":"CallSSDApi",
+        "z":"sd_mo5S4lmW6lymyE9X",
+        "viewType":"client-pages",
+        "nodeType":"flow",
+        "name":"",
+        "method":"post",
+        "methodMapping":"",
+        "methodMappingObj": {
+        },
+        "urlValue":"createuser",
+        "url":"createuser",
+        "ret":"json",
+        "retMapping":"",
+        "retMappingObj": {
+        },
+        "reqBody":"bh.input.formData",
+        "reqBodyObj": {
+          "mapVarType":"bh.input",
+          "mapVarValue":"formData"
+        },
+        "resultMapping":"bh.result",
+        "resultMappingObj": {
+          "mapVarType":"bh",
+          "mapVarValue":"result"
+        },
+        "headers": {
+        },
+        "headersObj": [
+        ],
+        "headerMapping":"",
+        "headerMappingObj": {
+        },
+        "params": {
+        },
+        "paramsObj": [
+        ],
+        "paramMapping":"",
+        "paramMappingObj": {
+        },
+        "inputVariables": [
+        ],
+        "inputParams": [
+        ],
+        "functionName":"sd_Z1xbg67sKFnOwtKj",
+        "category":"HTTP",
+        "x":240,
+        "y":260,
+        "wires": [
+          ["sd_FMnRm9n5daVeC7gz"
+          ]
+        ],
+        "__n_excludedFromValidation__": {
+        }
+      },
+      {
+        "id":"sd_FMnRm9n5daVeC7gz",
+        "type":"PageSwitch",
+        "z":"sd_mo5S4lmW6lymyE9X",
+        "viewType":"common",
+        "nodeType":"flow",
+        "name":"",
+        "property":"result.status",
+        "propertyType":"bh",
+        "propertyGv":"bh.result.status",
+        "rules": [
+          {"t":"eq",
+           "v":"200",
+           "vt":"num",
+           "gv":"200"
+          },
+          {
+            "t":"else"
+          }
+        ],
+        "checkall":"false",
+        "repair":false,
+        "outputs":2,
+        "functionName":"sd_FMnRm9n5daVeC7gz",
+        "category":"Function",
+        "x":420,
+        "y":260,
+        "wires": [
+          ["sd_m9yTuTjfadfXcy51"
+          ],
+          [
+            "sd_pLMYi8MNmNxzQup4"
+          ]
+        ],
+        "__n_excludedFromValidation__": {
+        }
+      },
+      {
+        "id":"sd_m9yTuTjfadfXcy51",
+        "type":"SnackBar",
+        "z":"sd_mo5S4lmW6lymyE9X",
+        "viewType":"client-pages",
+        "nodeType":"flow",
+        "name":"",
+        "message": {
+          "type":"str",
+          "value":"The user profile is created Successfully"
+        },
+        "action": {
+          "type":"str",
+          "value":""
+        },
+        "duration": {
+          "type":"num",
+          "value":""
+        },
+        "horizontalPosition":"center",
+        "horizontalPositionMap":"",
+        "verticalPosition":"bottom",
+        "verticalPositionMap":"",
+        "panelClass": {
+          "type":"str",
+          "value":""
+        },
+        "direction":"ltr",
+        "functionName":"sd_m9yTuTjfadfXcy51",
+        "category":"General",
+        "x":665,
+        "y":200,
+        "wires": [
+          [
+          ]
+        ],
+        "__n_excludedFromValidation__": {
+        }
+      },
+      {
+        "id":"sd_pLMYi8MNmNxzQup4",
+        "type":"SnackBar",
+        "z":"sd_mo5S4lmW6lymyE9X",
+        "viewType":"client-pages",
+        "nodeType":"flow",
+        "name":"",
+        "message": {
+          "type":"str",
+          "value":"An error has occured"
+        },
+        "action": {
+          "type":"str",
+          "value":""
+        },
+        "duration": {
+          "type":"num",
+          "value":""
+        },
+        "horizontalPosition":"center",
+        "horizontalPositionMap":"",
+        "verticalPosition":"bottom",
+        "verticalPositionMap":"",
+        "panelClass": {
+          "type":"str",
+          "value":""
+        },
+        "direction":"ltr",
+        "functionName":"sd_pLMYi8MNmNxzQup4",
+        "category":"General",
+        "x":660,
+        "y":360,
+        "wires": [
+          [
+          ]
+        ],
+        "__n_excludedFromValidation__": {
+        }
+      }
+    ],
+    "dependencies": [
+    ],
+    "serviceDesignerType":"pages",
+    "exportedDesignApp":"demapp2"
+  }

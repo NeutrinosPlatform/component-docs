@@ -1,0 +1,112 @@
+{
+    "design": [
+      {"id":"sd_4ewsvzaeA6F0Hrr4",
+       "type":"PageStart",
+       "z":"sd_mo5S4lmW6lymyE9X",
+       "viewType":"pages",
+       "nodeType":"start",
+       "name":"openBottomSheet",
+       "outputs":1,
+       "inputVariables": [
+       ],
+       "localVariables": [
+         {"key":"bottomSheetRef",
+          "defaultValue": {
+            "type":"any",
+            "value":""
+          },
+          "output":false
+         }
+       ],
+       "flow_type":"sync",
+       "functionName":"openBottomSheet",
+       "category":"General",
+       "x":255,
+       "y":290,
+       "wires": [
+         ["sd_Pchvgu1jCBWNLZZO"
+         ]
+       ],
+       "__n_excludedFromValidation__": {
+       }
+      },
+      {
+        "id":"sd_Pchvgu1jCBWNLZZO",
+        "type":"Script",
+        "z":"sd_mo5S4lmW6lymyE9X",
+        "viewType":"common",
+        "nodeType":"flow",
+        "name":"",
+        "script":"bh.local.bottomSheetRef = this.page.bottomSheet.open(bottomsheetComponent);",
+        "functionName":"sd_Pchvgu1jCBWNLZZO",
+        "category":"Function",
+        "x":455,
+        "y":290,
+        "wires": [
+          [
+          ]
+        ],
+        "__n_excludedFromValidation__": {
+        }
+      }
+    ],
+    "dependencies": [
+      {"devid":"68bc9eec-a2fc-bccd-1630-883e4552c3eb",
+       "name":"neutrinos-lifecycle-events",
+       "displayName":"Lifecycle Events",
+       "version":"1.0.0",
+       "username":"avinash.gupta@neutrinos.co",
+       "publisher":"Neutrinos",
+       "default":true,
+       "visible":false,
+       "platformSupportVersion": {
+         "min":"7.8.0"
+       },
+       "dependencies": [
+         {"name":"neutrinos-lifecycle-events",
+          "displayName":"Lifecycle Events",
+          "packageType":"studio-nodes",
+          "version":"1.0.0",
+          "nodes": {
+            "pages": [
+              {"name":"OnChanges",
+               "displayName":"On Changes"
+              },
+              {
+                "name":"OnInit",
+                "displayName":"On Init"
+              },
+              {
+                "name":"DoCheck",
+                "displayName":"Do Check"
+              },
+              {
+                "name":"AfterContentInit",
+                "displayName":"After Content Init"
+              },
+              {
+                "name":"AfterContentChecked",
+                "displayName":"After Content Checked"
+              },
+              {
+                "name":"AfterViewInit",
+                "displayName":"After View Init"
+              },
+              {
+                "name":"AfterViewChecked",
+                "displayName":"After View Checked"
+              },
+              {
+                "name":"OnDestroy",
+                "displayName":"On Destroy"
+              }
+            ]
+          }
+         }
+       ],
+       "missing":false
+      }
+    ],
+    "serviceDesignerType":"pages",
+    "exportedDesignApp":"demapp2"
+  }
