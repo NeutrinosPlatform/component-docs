@@ -1,0 +1,131 @@
+{
+    "design": [
+      {"id":"sd_qRsNPCKJ1j4fXDG4",
+       "type":"PageStart",
+       "z":"sd_kUB0ibuHDc24QtLL",
+       "viewType":"pages",
+       "nodeType":"start",
+       "name":"Add",
+       "outputs":1,
+       "inputVariables": [
+       ],
+       "localVariables": [
+       ],
+       "flow_type":"sync",
+       "functionName":"add",
+       "category":"General",
+       "x":355,
+       "y":430,
+       "wires": [
+         ["sd_aKf2VakNne8sgbRy"
+         ]
+       ],
+       "__n_excludedFromValidation__": {
+       }
+      },
+      {
+        "id":"sd_aKf2VakNne8sgbRy",
+        "type":"Script",
+        "z":"sd_kUB0ibuHDc24QtLL",
+        "viewType":"common",
+        "nodeType":"flow",
+        "name":"",
+        "script":"page.userService.addUserDetail(this.page.user);",
+        "functionName":"sd_aKf2VakNne8sgbRy",
+        "category":"Function",
+        "x":515,
+        "y":430,
+        "wires": [
+          ["sd_IGvDIUG2wduIZBTS"
+          ]
+        ],
+        "__n_excludedFromValidation__": {
+        }
+      },
+      {
+        "id":"sd_IGvDIUG2wduIZBTS",
+        "type":"Navigation",
+        "z":"sd_kUB0ibuHDc24QtLL",
+        "viewType":"client-pages",
+        "nodeType":"flow",
+        "name":"",
+        "path":"/Userdetail",
+        "pathMap":"",
+        "pathparams":"",
+        "pathparamsMap":"",
+        "qparams":"",
+        "qparamsMap":"",
+        "qparamsArray":"",
+        "resultMapping":"",
+        "functionName":"sd_IGvDIUG2wduIZBTS",
+        "category":"Navigation",
+        "x":655,
+        "y":430,
+        "wires": [
+          [
+          ]
+        ],
+        "__n_excludedFromValidation__": {
+        }
+      }
+    ],
+    "dependencies": [
+      {"devid":"68bc9eec-a2fc-bccd-1630-883e4552c3eb",
+       "name":"neutrinos-lifecycle-events",
+       "displayName":"Lifecycle Events",
+       "version":"1.0.0",
+       "username":"avinash.gupta@neutrinos.co",
+       "publisher":"Neutrinos",
+       "default":true,
+       "visible":false,
+       "platformSupportVersion": {
+         "min":"7.8.0"
+       },
+       "dependencies": [
+         {"name":"neutrinos-lifecycle-events",
+          "displayName":"Lifecycle Events",
+          "packageType":"studio-nodes",
+          "version":"1.0.0",
+          "nodes": {
+            "pages": [
+              {"name":"OnChanges",
+               "displayName":"On Changes"
+              },
+              {
+                "name":"OnInit",
+                "displayName":"On Init"
+              },
+              {
+                "name":"DoCheck",
+                "displayName":"Do Check"
+              },
+              {
+                "name":"AfterContentInit",
+                "displayName":"After Content Init"
+              },
+              {
+                "name":"AfterContentChecked",
+                "displayName":"After Content Checked"
+              },
+              {
+                "name":"AfterViewInit",
+                "displayName":"After View Init"
+              },
+              {
+                "name":"AfterViewChecked",
+                "displayName":"After View Checked"
+              },
+              {
+                "name":"OnDestroy",
+                "displayName":"On Destroy"
+              }
+            ]
+          }
+         }
+       ],
+       "missing":false
+      }
+    ],
+    "serviceDesignerType":"pages",
+    "exportedDesignApp":"demapp2"
+  }
