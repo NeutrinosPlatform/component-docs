@@ -1,0 +1,135 @@
+{
+    "design": [
+      {"id":"sd_zFHIvM1EVw5JDfrB",
+       "type":"OnInit",
+       "z":"sd_kUB0ibuHDc24QtLL",
+       "viewType":"common",
+       "nodeType":"start",
+       "name":"",
+       "functionName":"sd_zFHIvM1EVw5JDfrB",
+       "category":"Lifecycle Events",
+       "x":325,
+       "y":280,
+       "wires": [
+         ["sd_8qjuLjcaJj1Ms81d"
+         ]
+       ],
+       "__n_excludedFromValidation__": {
+       }
+      },
+      {
+        "id":"sd_8qjuLjcaJj1Ms81d",
+        "type":"UseDependency",
+        "z":"sd_kUB0ibuHDc24QtLL",
+        "viewType":"client-pages",
+        "nodeType":"flow",
+        "name":"",
+        "inputs":1,
+        "outputs":1,
+        "property":"",
+        "propertyType":"bh",
+        "propertyGv":"bh.",
+        "alias":"",
+        "modules": [
+          {"textIp":"userService",
+           "typedIpValue": {
+             "type":"this.page",
+             "value":"userService"
+           },
+           "injectable":true
+          }
+        ],
+        "import_all":false,
+        "library":"app/services/user/user.service ",
+        "serviceDesignerType":"pages",
+        "functionName":"sd_8qjuLjcaJj1Ms81d",
+        "category":"Function",
+        "x":465,
+        "y":280,
+        "wires": [
+          ["sd_5nmlLrsKCKDzv399"
+          ]
+        ],
+        "__n_excludedFromValidation__": {
+        }
+      },
+      {
+        "id":"sd_5nmlLrsKCKDzv399",
+        "type":"Script",
+        "z":"sd_kUB0ibuHDc24QtLL",
+        "viewType":"common",
+        "nodeType":"flow",
+        "name":"",
+        "script":"page.user = {\n    name: '',\n    organisation: '',\n    email: '',\n    mobile: '',\n    address: '',\n}",
+        "functionName":"sd_5nmlLrsKCKDzv399",
+        "category":"Function",
+        "x":605,
+        "y":280,
+        "wires": [
+          [
+          ]
+        ],
+        "__n_excludedFromValidation__": {
+        }
+      }
+    ],
+    "dependencies": [
+      {"devid":"68bc9eec-a2fc-bccd-1630-883e4552c3eb",
+       "name":"neutrinos-lifecycle-events",
+       "displayName":"Lifecycle Events",
+       "version":"1.0.0",
+       "username":"avinash.gupta@neutrinos.co",
+       "publisher":"Neutrinos",
+       "default":true,
+       "visible":false,
+       "platformSupportVersion": {
+         "min":"7.8.0"
+       },
+       "dependencies": [
+         {"name":"neutrinos-lifecycle-events",
+          "displayName":"Lifecycle Events",
+          "packageType":"studio-nodes",
+          "version":"1.0.0",
+          "nodes": {
+            "pages": [
+              {"name":"OnChanges",
+               "displayName":"On Changes"
+              },
+              {
+                "name":"OnInit",
+                "displayName":"On Init"
+              },
+              {
+                "name":"DoCheck",
+                "displayName":"Do Check"
+              },
+              {
+                "name":"AfterContentInit",
+                "displayName":"After Content Init"
+              },
+              {
+                "name":"AfterContentChecked",
+                "displayName":"After Content Checked"
+              },
+              {
+                "name":"AfterViewInit",
+                "displayName":"After View Init"
+              },
+              {
+                "name":"AfterViewChecked",
+                "displayName":"After View Checked"
+              },
+              {
+                "name":"OnDestroy",
+                "displayName":"On Destroy"
+              }
+            ]
+          }
+         }
+       ],
+       "missing":false
+      }
+    ],
+    "serviceDesignerType":"pages",
+    "exportedDesignApp":"demapp2"
+  }
