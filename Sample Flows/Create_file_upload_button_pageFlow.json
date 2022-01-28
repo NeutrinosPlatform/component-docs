@@ -1,0 +1,150 @@
+{
+    "design": [
+        {
+            "id": "sd_E8QDOhLjOLKfQd0a",
+            "type": "PageStart",
+            "z": "sd_EGCu51sjM9u1Oy0l",
+            "viewType": "pages",
+            "nodeType": "start",
+            "name": "Upload",
+            "outputs": 1,
+            "inputVariables": [
+                {
+                    "key": "files",
+                    "defaultValue": {
+                        "type": "any",
+                        "value": "[]"
+                    },
+                    "output": false
+                }
+            ],
+            "localVariables": [
+                {
+                    "key": "formData",
+                    "defaultValue": {
+                        "type": "any",
+                        "value": ""
+                    },
+                    "output": false
+                },
+                {
+                    "key": "response",
+                    "defaultValue": {
+                        "type": "any",
+                        "value": ""
+                    },
+                    "output": false
+                }
+            ],
+            "flow_type": "sync",
+            "functionName": "upload",
+            "category": "General",
+            "x": 100,
+            "y": 170,
+            "wires": [
+                [
+                    "sd_j1eKRHgExxxkzNnN"
+                ]
+            ],
+            "__n_excludedFromValidation__": {}
+        },
+        {
+            "id": "sd_j1eKRHgExxxkzNnN",
+            "type": "Script",
+            "z": "sd_EGCu51sjM9u1Oy0l",
+            "viewType": "common",
+            "nodeType": "flow",
+            "name": "",
+            "script": "console.log(bh.input.files)\nbh.local.formData = new FormData();\n        Array.from(bh.input.files).forEach(f => bh.local.formData.append('file',f))\n        \n        // page.fileser.uploadfile(formData).then((result)=>{\n        // if(result){\n        //     this.uploadSuccess = true;\n        //     console.log(result.local);\n        // }\n        // });",
+            "functionName": "sd_j1eKRHgExxxkzNnN",
+            "category": "Function",
+            "x": 235,
+            "y": 170,
+            "wires": [
+                [
+                    "sd_LNinrxJVkcOwKz32"
+                ]
+            ],
+            "__n_excludedFromValidation__": {}
+        },
+        {
+            "id": "sd_LNinrxJVkcOwKz32",
+            "type": "PageCallService",
+            "z": "sd_EGCu51sjM9u1Oy0l",
+            "viewType": "pages",
+            "nodeType": "flow",
+            "name": "",
+            "outputs": 1,
+            "isValidNode": true,
+            "noerr": 0,
+            "service": {
+                "id": "sd_vKqf4WBv8881xlKU",
+                "type": "tab",
+                "createdDate": "2022-01-25T10:15:28.377Z",
+                "label": "FileService",
+                "disabled": false,
+                "info": "",
+                "functionSeq": 0
+            },
+            "flow": {
+                "flowId": "sd_kG0NiI0jZCMCWJYi",
+                "flowName": "uploadfile"
+            },
+            "inputVariables": [
+                {
+                    "key": "data",
+                    "map": true,
+                    "valueType": "bh.local",
+                    "value": "formData"
+                }
+            ],
+            "outputMapping": [
+                {
+                    "mapVarType": "local",
+                    "key": "response",
+                    "valueType": "bh.local",
+                    "value": "response",
+                    "mapVarName": "response",
+                    "localVar": "bh.local.response"
+                }
+            ],
+            "serviceImportPath": "app/sd-services/FileService",
+            "startName": "uploadfile",
+            "inputParams": [
+                "bh.local.formData"
+            ],
+            "accept_bh": false,
+            "accept_csd": true,
+            "functionName": "sd_LNinrxJVkcOwKz32",
+            "category": "General",
+            "x": 360,
+            "y": 170,
+            "wires": [
+                [
+                    "sd_fiHuXzR0Bkepd95P"
+                ]
+            ],
+            "__n_excludedFromValidation__": {}
+        },
+        {
+            "id": "sd_fiHuXzR0Bkepd95P",
+            "type": "Script",
+            "z": "sd_EGCu51sjM9u1Oy0l",
+            "viewType": "common",
+            "nodeType": "flow",
+            "name": "",
+            "script": "console.log(bh.local.response)",
+            "functionName": "sd_fiHuXzR0Bkepd95P",
+            "category": "Function",
+            "x": 495,
+            "y": 170,
+            "wires": [
+                []
+            ],
+            "__n_excludedFromValidation__": {}
+        }
+    ],
+    "dependencies": [],
+    "serviceDesignerType": "pages",
+    "exportedDesignApp": "fileuploadbutton1"
+}
